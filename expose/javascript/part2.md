@@ -52,3 +52,7 @@
    F. true Boolean(2) evaluates to true since 2 is not a thing that Boolean considers as empty thus true is equal to true.
 
 15. The difference between == and === is that when == the javascript automatic conversions gets applied and so 2 == '2' would be true but they are of different types. === ensures that the things or objects on either sides are of the same type and thus the javascript type conversions do not happen when === is used. 
+
+17. The function called with the parameters modifyArray([1,2,3], doSomething) would return the result [2,4,6]. First [1,2,3] is the array that is passed in and the fucntion for each element in the array passes the element to the callback function which in this case is doSomething which returns the double of that number which then gets pushed to the back of the array called newArr which is what gets returned at the end of the function. 
+
+19. The output of the code above is it first prints 1, then 4, then 3, then 2. The code gets executed line by line so console.log(1) gets executed first then the first set timeout but the console.log statement is in the callback so the console.log is not executed yet and so it goes to the next timeout and for the same reason then to the console.log(4) and prints out 4. Then console.log(3) is executed because the delay is shorter than the other setTimeout and so the callback is called then console.log(2) is executed a second after its setTimeout was executed. 
