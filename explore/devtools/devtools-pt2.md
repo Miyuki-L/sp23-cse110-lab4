@@ -1,0 +1,2 @@
+1. The bug is the type of num1 and num2 that you get from document.getElementById is type string. and inside calculateSum it gets passed two strings and so when it trys to add the two strings the result is a string which we can also see from typeof(result) thus resulting in the calculation of calculatleSum to be wrong.
+2. How I would fix it is to convert the type of num1 and num2 to numbers using Number(str)
